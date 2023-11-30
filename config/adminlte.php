@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => env('APP_NAME'),
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -30,8 +30,8 @@ return [
     |
     */
 
-    'use_ico_only' => false,
-    'use_full_favicon' => false,
+    'use_ico_only' => true,
+    'use_full_favicon' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>'. env('APP_NAME') . '</b>',
+    'logo_img' => 'images/logo/logo.jpeg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'images/logo/logo.jpeg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -109,8 +109,8 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'AdminLTE Preloader Image',
+            'path' => 'images/logo/logo.jpeg',
+            'alt' => 'Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
             'height' => 60,
@@ -259,7 +259,7 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => 'profile',
 
     /*
     |--------------------------------------------------------------------------
@@ -294,18 +294,18 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
         [
             'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
 
         // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+//        [
+//            'type' => 'sidebar-menu-search',
+//            'text' => 'search',
+//        ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
