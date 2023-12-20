@@ -1,0 +1,141 @@
+
+.minhaTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Alinhar à direita para numeros */
+.minhaTable th.numero,
+.minhaTable td.numero {
+    text-align: right;
+}
+/* Alinhar ao centro para datas */
+.minhaTable th.data,
+.minhaTable td.data {
+    text-align: center;
+    width: 100px;
+    white-space: nowrap;
+}
+
+/* Alinhar à esquerda para texto */
+.minhaTable th.texto,
+.minhaTable td.texto {
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Alinhar ao centro  para status */
+.minhaTable th.status,
+.minhaTable td.status {
+    text-align: center;
+    width: 100px;
+    white-space: nowrap;
+}
+
+/* Alinhar ao centro para acoes */
+.minhaTable th.acoes,
+.minhaTable td.acoes {
+    text-align: center;
+    width: 100px;
+    white-space: nowrap;
+}
+
+.minhaTable th:nth-child(-n+1){
+    width: 10px;
+}
+
+/* Estilos para dispositivos móveis (tamanhos de tela menores que 768px, por exemplo) */
+@media (max-width: 767px) {
+    .modal-body {
+        height: auto;
+    }
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+
+}
+/* Estilos para dispositivos tablets (tamanhos de tela maior que 767 e menor que 1200px, por exemplo) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /*.modal {*/
+    /*    display: none;*/
+    /*    position: fixed;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    background-color: rgba(0, 0, 0, 0.5);*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    display: flex;*/
+    /*}*/
+    /*.modal-content {*/
+    /*    !*height: 650px;*!*/
+    /*    width: 120%;*/
+    /*    background-color: #fff;*/
+    /*    padding: 0px;*/
+    /*    border-radius: 5px;*/
+    /*    position: relative;*/
+    /*    text-align: center;*/
+    /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    /*    !*max-width: 80%;*!*/
+    /*}*/
+    .modal-body {
+        height: 500px;
+    }
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        width: 30px;
+        text-align: left; white-space: nowrap;
+    }
+}
+
+/* Estilos para desktop (tamanhos de tela maiores que 767px) */
+@media (min-width: 1023px) {
+    .modal-body {
+        height: 500px;
+    }
+    .desktop {
+        width: 40px;
+        text-align: left; white-space: nowrap;
+    }
+}
+
+/* Sponsor */
+/* Edit - form */
+#tabela-com-scroll{
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#tableEmprestimo{
+    width:100%; border-collapse: collapse;
+}
+
+#tableEmprestimo tbody {
+    overflow-y: auto;
+}
+/* Sponsors */
+
+/*Clients*/
+/*Clients*/
+
+/* Loans */
+/* Loans */
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
