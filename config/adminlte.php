@@ -312,76 +312,51 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Administration',
+            'icon' => 'far fas fa-users',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Users',
+                    'url'  => 'users',
+                    'icon' => 'far fas fa-user-edit',
                 ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'        => 'Sponsor',
+            'url'         => 'sponsors',
+            'icon'        => 'far fas fa-wallet',
+//            'label'       => 4,
+//            'label_color' => 'success',
+        ],
+
+        [
+            'text'        => 'Clients',
+            'url'         => 'clients',
+            'icon'        => 'far fas fa-address-card',
+//            'label'       => 4,
+//            'label_color' => 'success',
+        ],
+
+        [
+            'text' => 'Generator',
+            'url'  => 'generator',
+            'icon' => 'fas fa-money-check-alt',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Loans',
+            'url'  => 'loans',
+            'icon' => 'fas fa-money-bill-alt',
         ],
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Payments',
+            'url'  => 'payments',
+            'icon' => 'far fa-credit-card',
+        ],
+        [
+            'text' => 'Simulator',
+            'url'  => 'simulator',
+            'icon' => 'fa fa-calculator',
         ],
     ],
 
