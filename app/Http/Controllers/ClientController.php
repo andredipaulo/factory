@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ClientFormRequest;
 use App\Models\Client;
 use Exception;
 use Illuminate\Http\Request;
