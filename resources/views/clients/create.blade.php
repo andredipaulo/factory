@@ -69,7 +69,7 @@
                                             <div class="input-group-prepend desktop">
                                                 <span class="input-group-text"><i class="fas fa-hand-holding-usd"></i></span>
                                             </div>
-                                            <input type="text" class="form-control @error('limit')  is-invalid @enderror" id="limit" name="limit" value="{{ old('limit') }}" placeholder="Limite">
+                                            <input type="text" class="form-control @error('limit')  is-invalid @enderror" id="limit" name="limit" value="{{ old('limit') }}" placeholder="Limite" required>
                                             @if($errors->has('limit'))
                                                 <div class="invalid-feedback">{{ $errors->first('limit') }}</div>
                                             @endif
@@ -84,7 +84,7 @@
                                             <div class="input-group-prepend  desktop">
                                                 <span class="input-group-text"><i class="fas fa-at"></i></span>
                                             </div>
-                                            <input type="email" class="form-control @error('email')  is-invalid @enderror" id="email" name="email"  value="{{ old('email') }}" placeholder="E-mail">
+                                            <input type="email" class="form-control @error('email')  is-invalid @enderror" id="email" name="email"  value="{{ old('email') }}" placeholder="E-mail" required>
                                             @error('email')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
