@@ -22,13 +22,12 @@
                         <th class="numero desktop">Id</th>
                         <th class="texto">Agiota</th>
                         <th class="texto">Cliente</th>
-                        <th class="data desktop">Data</th>
+                        <th class="data">Data</th>
                         <th class="numero">Valor</th>
                         <th class="numero">Atual</th>
-                        <th class="numero desktop">Juros</th>
+                        <th class="numero">% Jur</th>
+                        <th class="numero">$ Jur</th>
                         <th class="numero">Pago</th>
-                        {{--                            <th class="data">Adicionado</th>--}}
-                        {{--                            <th class="data">Atualizado</th>--}}
                         <th class="acoes">Ações</th>
                     </tr>
                     </thead>
@@ -42,14 +41,12 @@
                             <td class="texto">{{ $loan->client->first_name }} {{ $loan->client->last_name }}
                                 @if(count($loan->payments) >0)<span class="float-right badge badge-success">{{ count($loan->payments) }}</span>@endif
                             </td>
-                            <td class="data desktop">{{ $newDate->format("d/m/Y") }}</td>
-                            {{--                            <td class="data desktop">{{ $loan->loan_date }} </td>--}}
-                            <td class="numero">{{ number_format( $loan->amount_original, 2, ',', '.') }}</td>
-                            <td class="numero">{{ number_format( $loan->amount, 2, ',', '.') }}</td>
-                            <td class="numero desktop">{{ number_format( $loan->fees, 2, ',', '.') }}</td>
+                            <td class="data ">{{ $newDate->format("d/m/Y") }}</td>
+                            <td class="numero ">{{ number_format( $loan->amount_original, 2, ',', '.') }}</td>
+                            <td class="numero ">{{ number_format( $loan->amount, 2, ',', '.') }}</td>
+                            <td class="numero ">{{ number_format( $loan->fees, 2, ',', '.') }}</td>
+                            <td class="numero">{{ number_format( ($loan->amount *  $loan->fees)/100, 2, ',', '.')}}</td>
                             <td class="numero">{{ number_format( $loan->total_paid, 2, ',', '.') }}</td>
-                            {{--                            <td class="data">{{ date_format($loan->created_at, 'd/m/Y') }}</td>--}}
-                            {{--                            <td class="data">{{ date_format($loan->updated_at, 'd/m/Y') }}</td>--}}
                             <td class="acoes">
                                 <meta name="csrf-token" content="{{ csrf_token() }}"/>
                                 <a class="btn btn-primary btn-sm editLoan" data-loan="{{ json_encode($loan) }}">

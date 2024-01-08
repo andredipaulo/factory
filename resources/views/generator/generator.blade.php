@@ -240,6 +240,7 @@
 
         // $('#valor').mask('0.000.000.000.000.000,00', {reverse: true});
         $('#valorEmprestimo').mask('#.##0,00', { reverse:true });
+        $('#juros').mask('#.##0,00', { reverse:true });
 
         function calcular() {
 
@@ -359,7 +360,7 @@
                 const sponsor = sponsor_id;
                 const client = client_id;
                 const amount = document.getElementById('valorEmprestimo').value.replace("R$", "").replace(/\./g, "").replace(",", ".");
-                const fees = document.getElementById('juros').value;
+                const fees = document.getElementById('juros').value.replace(/\./g, "").replace(",", ".");
                 const loan_date = document.getElementById('date').value;
 
                 emprestimo(sponsor, client, amount, fees, loan_date);

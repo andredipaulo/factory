@@ -204,7 +204,8 @@ function emprestimo( sponsor, client, amount, fees, loan_date){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         type: "POST",
-        url: "/loan/" + {loans: dataLoan}, // A URL da rota
+        //url: "/loans/" + {loans: dataLoan}, // A URL da rota
+        url: "/loans/", // A URL da rota
         data: {loans: dataLoan},
         success: function(response) {
             // Tratar a resposta do servidor, se necessário

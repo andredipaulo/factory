@@ -59,7 +59,6 @@ class LoanController extends Controller
     {
         try {
             foreach ($request->input('loans') as $loanData) {
-
                 // Use a função date() para formatar a data
                 $data_formatada = date("Y-m-d", strtotime(str_replace("/", "-", $loanData['loan_date'])));
 
@@ -73,9 +72,10 @@ class LoanController extends Controller
 
                 $loan->save();
             }
-            Toastr::success('Cadastrado com sucesso', 'Cliente', ["positionClass" => "toast-top-right"]);
+
             return response()->json([
-                'message' => 'Dados salvos com sucesso'
+                'message' => 'Dados salvos com sucesso',
+                'dados' => $loan
             ]);
         } catch (Exception $e) {
             return response()->json([
